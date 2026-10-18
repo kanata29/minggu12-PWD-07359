@@ -1,0 +1,256 @@
+/* =========================================================
+
+   Dimuat SETELAH bootstrap.min.css, supaya bisa menimpa variabelnya.
+   Warna utama: #0c459a
+   ========================================================= */
+
+/* ---------- 1. TEMA: ganti warna "primary" bawaan Bootstrap ---------- */
+:root {
+    --bs-primary: #0c459a;
+    --bs-primary-rgb: 12, 69, 154;
+    --bs-link-color: #0c459a;
+    --bs-link-color-rgb: 12, 69, 154;
+    --bs-link-hover-color: #08306b;
+    --bs-link-hover-color-rgb: 8, 48, 107;
+    --bs-body-font-family: "Figtree", "Segoe UI", system-ui, sans-serif;
+    --bs-body-color: #16233b;
+    --bs-border-color: #d3dcec;
+    --bs-secondary-color: #5a6a85;
+
+    --biru: #0c459a;
+    --biru-tua: #08306b;
+    --biru-muda: #eef3fb;
+    --font-judul: "Arial Black", "Segoe UI", system-ui, sans-serif;
+}
+
+/* tombol primary Bootstrap pakai variabel sendiri, jadi ditimpa di sini */
+.btn-primary {
+    --bs-btn-bg: #0c459a;
+    --bs-btn-border-color: #0c459a;
+    --bs-btn-hover-bg: #08306b;
+    --bs-btn-hover-border-color: #08306b;
+    --bs-btn-active-bg: #08306b;
+    --bs-btn-active-border-color: #08306b;
+    --bs-btn-disabled-bg: #0c459a;
+    --bs-btn-disabled-border-color: #0c459a;
+}
+
+.btn-light {
+    --bs-btn-color: #0c459a;
+    --bs-btn-hover-color: #08306b;
+}
+
+/* ---------- 2. DASAR (box model & teks) ---------- */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;      /* judul tidak tertutup navbar fixed saat lompat anchor */
+}
+
+body {
+    padding-top: 56px;             /* tinggi navbar fixed-top */
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-judul);
+    letter-spacing: -0.01em;
+}
+
+/* ---------- 3. HERO ---------- */
+.hero {
+    padding: 72px 0;
+}
+
+.hero-nama {
+    font-family: var(--font-judul);
+    font-weight: 800;
+    font-size: clamp(3.2rem, 9vw, 6.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+}
+
+.hero-deskripsi {
+    max-width: 520px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-foto {
+    max-width: 320px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 14px 14px 0 rgba(255, 255, 255, 0.16);   /* blok bergeser di belakang foto */
+}
+
+/* ---------- 4. BAGIAN KONTEN ---------- */
+.bagian {
+    padding: 28px 0 32px;
+    border-top: 1px solid var(--bs-border-color);
+}
+
+.bagian:first-child {
+    padding-top: 0;
+    border-top: 0;                 /* bagian pertama tanpa garis */
+}
+
+.bagian h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--biru);
+    margin-bottom: 14px;
+}
+
+.bagian p {
+    max-width: 68ch;               /* baris teks tidak terlalu panjang */
+}
+
+/* ---------- 5. TABEL PENDIDIKAN (grid Bootstrap: row + col) ---------- */
+.tabel-grid {
+    border: 1px solid var(--bs-border-color);
+    border-bottom: 0;
+}
+
+.tabel-judul {
+    background-color: var(--biru);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.tabel-baris {
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+.tabel-baris:hover {
+    background-color: var(--biru-muda);
+}
+
+/* padding tiap sel (kolom) */
+.sel {
+    padding: 10px 14px;
+}
+
+/* label kecil ("Year", "Status", dll) yang hanya muncul di HP */
+.label-hp {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--bs-secondary-color);
+    line-height: 1.2;
+}
+
+/* ---------- 5b. EXPERIENCE ---------- */
+.pengalaman + .pengalaman {
+    margin-top: 28px;
+    padding-top: 28px;
+    border-top: 1px solid var(--bs-border-color);
+}
+
+.pengalaman-foto {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+/* ---------- 6. FORM ---------- */
+.form-control:focus {
+    border-color: var(--biru);
+    box-shadow: 0 0 0 0.2rem rgba(12, 69, 154, 0.2);
+}
+
+/* ---------- 7. ASIDE SERTIFIKAT ---------- */
+.panel-sertifikat {
+    background-color: var(--biru-muda);
+    border: 1px solid var(--bs-border-color);
+}
+
+.aside-sticky {
+    top: 76px;                     /* jarak dari atas saat menempel (sticky-lg-top) */
+}
+
+/* ----- Gambar sebagai "checkbox" (lightbox) ----- */
+.certif-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+}
+
+/* checkbox disembunyikan secara visual, tapi tetap bisa difokus keyboard */
+.certif-toggle {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.certif-box label {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.certif-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: zoom-in;
+    transition: transform 0.2s;
+}
+
+.certif-box img:hover {
+    transform: translateY(-3px);
+}
+
+.certif-toggle:focus-visible + label img {
+    outline: 3px solid var(--biru);
+    outline-offset: 2px;
+}
+
+/* Saat gambar diklik (checkbox tercentang): tampil besar di tengah layar */
+.certif-toggle:checked + label img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 90%;
+    z-index: 2000;                 /* di atas navbar */
+    border-width: 4px !important;
+    border-color: #ffffff !important;
+    cursor: zoom-out;
+    box-shadow: 0 0 0 100vmax rgba(5, 22, 52, 0.88);   /* latar gelap */
+}
+
+/* =========================================================
+   RESPONSIVE (media query)
+   ========================================================= */
+
+/* HP: di bawah 768px */
+@media screen and (max-width: 767.98px) {
+    .hero {
+        padding: 44px 0;
+    }
+
+    .hero-foto {
+        box-shadow: 8px 8px 0 rgba(255, 255, 255, 0.16);
+    }
+
+    .bagian h2 {
+        font-size: 1.35rem;
+    }
+}
+
+/* Hormati pengaturan "kurangi animasi" di perangkat */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .certif-box img {
+        transition: none;
+    }
+}

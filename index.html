@@ -1,431 +1,430 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Kanaka Tabina</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .aside-container {
-            margin-top: 28px; /* Menyesuaikan agar sejajar dengan posisi My Profile */
-        }
-    </style>
+    <title>Kanaka | Profil</title>
+
+    <!-- Font (opsional, kalau offline otomatis pakai font bawaan sistem) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body bgcolor="#f0f8ff" text="#1a1a1a">
 
-    <!-- HEADER -->
-    <header>
-        <table border="0" width="100%" bgcolor="#003366" cellpadding="20">
-            <tr>
-                <td align="center">
-                    <h1><font color="#ffffff">KANAKA TABINA'S PORTFOLIO</font></h1>
-                    <h3><font color="#e0f2fe">Information Systems Study Program - Dian Nuswantoro University</font></h3>
-                </td>
-            </tr>
-        </table>
-    </header>
+<body id="atas">
 
-    <!-- NAVIGATION -->
-    <nav>
-        <table border="0" width="100%" bgcolor="#004080" cellpadding="10">
-            <tr>
-                <td align="center">
-                    <a href="#profile"><font color="#ffffff"><b>My Profile</b></font></a> &nbsp;|&nbsp;
-                    <a href="#education"><font color="#ffffff"><b>Education History</b></font></a> &nbsp;|&nbsp;
-                    <a href="#skills"><font color="#ffffff"><b>Skills & Hobbies</b></font></a> &nbsp;|&nbsp;
-                    <a href="#project"><font color="#ffffff"><b>Projects</b></font></a> &nbsp;|&nbsp;
-                    <a href="#contact"><font color="#ffffff"><b>Contact</b></font></a>
-                </td>
-            </tr>
-        </table>
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#atas">Kanaka Tabina</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuUtama"
+                aria-controls="menuUtama" aria-expanded="false" aria-label="Buka menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuUtama">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#atas">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tentang">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pendidikan">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Certificates</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#sertifikat">View All Certificates</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#sertif-1">Microsoft Excel</a></li>
+                            <li><a class="dropdown-item" href="#sertif-2">Task Manager Laravel</a></li>
+                            <li><a class="dropdown-item" href="#sertif-3">Seminar Sistem Informasi</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#saran">Form Saran</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <br>
+    <!-- ================= HERO ================= -->
+    <header class="hero bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center g-4 g-md-5">
 
-    <!-- MAIN TABLE FOR LAYOUT (LEFT MAIN CONTENT & RIGHT ASIDE) -->
-    <div class="content-wrapper">
-        <table border="0" width="100%" cellpadding="10" cellspacing="0">
-            <tr valign="top">
-                
-                <!-- MAIN CONTENT (LEFT) -->
-                <td width="70%">
-                    <main>
-                        
-                        <!-- SECTION: MY PROFILE -->
-                        <section id="profile">
-                            <h2><font color="#003366">A. My Profile</font></h2>
-                            <hr size="2" color="#003366" align="left" width="100%">
-                            
-                            <img src="C:\xampp\htdocs\PWD\minggu12\images\foto kanaka.png" alt="Profile Picture" width="150" height="190" align="left" hspace="15" vspace="5">
-                            
-                            <p>
-                                Hello! My name is <b>Kanaka Tabina</b>. I am a student at Dian Nuswantoro University, majoring in Information Systems.
-                                I have a strong interest in computer science, communication, and publication. My hobbies include fishing, swimming, 
-                                and collecting diecast cars. I enjoy learning new technologies and continuously improving my technical and 
-                                problem-solving skills through academic projects and self-study.
-                            </p>
-                            <p>
-                                This website is built entirely using HTML5 semantic elements without external CSS to fulfill the basic web structure assignment requirements. 
-                                Throughout this page, I utilize various HTML5 tags to structure and present information systematically. 
-                                Building this project serves as a practical exercise to better understand foundational web development concepts.
-                            </p>
-                            <br clear="all">
-                        </section>
+                <!---->
+                <div class="col-8 col-sm-6 col-md-4 order-md-last mx-auto">
+                    <img src="images/foto kanaka.png" class="hero-foto img-fluid w-100" alt="Foto Kanaka">
+                </div>
 
-                        <br>
-
-                        <!-- SECTION: EDUCATION HISTORY -->
-                        <section id="education">
-                            <h2><font color="#003366">B. Education History</font></h2>
-                            <hr size="2" color="#003366" align="left" width="100%">
-                            
-                            <table border="1" cellpadding="8" cellspacing="0" width="100%" bordercolor="#003366">
-                                <tr bgcolor="#004080">
-                                    <th><font color="#ffffff">No</font></th>
-                                    <th><font color="#ffffff">Year</font></th>
-                                    <th><font color="#ffffff">School / Institution</font></th>
-                                    <th><font color="#ffffff">Status</font></th>
-                                    <th><font color="#ffffff">Major / Notes</font></th>
-                                </tr>
-                                <tr bgcolor="#ffffff" align="center">
-                                    <td>1</td>
-                                    <td>2013 - 2019</td>
-                                    <td align="left">14 Elementary School Jakarta</td>
-                                    <td>Graduated</td>
-                                    <td>-</td>
-                                </tr>
-                                <tr bgcolor="#e6f2ff" align="center">
-                                    <td>2</td>
-                                    <td>2019 - 2022</td>
-                                    <td align="left">9 Junior High School Jakarta</td>
-                                    <td>Graduated</td>
-                                    <td>-</td>
-                                </tr>
-                                <tr bgcolor="#ffffff" align="center">
-                                    <td>3</td>
-                                    <td>2022 - 2025</td>
-                                    <td align="left">98 Senior High School Jakarta</td>
-                                    <td>Graduated</td>
-                                    <td>Paket A (MIPA)</td>
-                                </tr>
-                                <tr bgcolor="#e6f2ff" align="center">
-                                    <td>4</td>
-                                    <td>2025 - Present</td>
-                                    <td align="left">Dian Nuswantoro University</td>
-                                    <td>Ongoing</td>
-                                    <td>Bachelor of Information Systems</td>
-                                </tr>
-                            </table>
-                        </section>
-
-                        <br>
-
-                        <!-- SECTION: SKILLS & HOBBIES -->
-                        <section id="skills">
-                            <h2><font color="#003366">C. Skills & Hobbies</font></h2>
-                            <hr size="2" color="#003366" align="left" width="100%">
-                            
-                            <h3>1. Soft Skills</h3>
-                            <ul>
-                                <li>Public Speaking</li>
-                                <li>Communication</li>
-                                <li>Teamwork</li>
-                                <li>Leadership</li>
-                                <li>Time Management</li>
-                            </ul>
-
-                            <h3>2. Technical Skills</h3>
-                            <ul>
-                                <li>Microsoft Word</li>
-                                <li>Microsoft Excel</li>
-                                <li>Microsoft Power Point</li>
-                                <li>Canva</li>
-                                <li>Basic Video Editing</li>
-                            </ul>
-
-                            <h3>3. Hobbies & Interests</h3>
-                            <ol>
-                                <li>Fishing</li>
-                                <li>Swimming</li>
-                                <li>Cycling</li>
-                                <li>Diecast Collection</li>
-                            </ol>
-                        </section>
-
-                        <br>
-
-                        <!-- SECTION: PROJECTS & EXPERIENCE -->
-                        <section id="project">
-                            <h2><font color="#003366">D. Projects & Experience</font></h2>
-                            <hr size="2" color="#003366" align="left" width="100%">
-                            
-                            <!-- EXPERIENCE 1 -->
-                            <article>
-                                <h3>1. Communication Media Extracurricular</h3>
-                                <p><i> Date: 2022-2023</i></p>
-                                
-                                <img src="C:\xampp\htdocs\PWD\minggu12\images\HIFIVE_98.png" alt="Majalah HIFIVE SMA N 98" width="180" height="120" align="right" hspace="15" vspace="5" border="1">
-                                
-                                <p>
-                                    Participated in school journalism activities through event coverage, interviews, documentation, and the preparation of publication media.
-                                    This experience shaped communication, collaboration, and the ability to convey information creatively and informatively.
-                                </p>
-
-                                <p>
-                                    Media Content Production : Involved in the documentation, coverage, and content production process together with the Communication Media team.
-                                </p>
-                                <br clear="all">
-                            </article>
-
-                            <br><hr size="1" color="#cccccc"><br>
-
-                            <!-- EXPERIENCE 2 -->
-                            <article>
-                                <h3>2. Chemistry Olympiad Selection Participant</h3>
-                                <p><i> Date: 2023</i></p>
-                                
-                                <img src="C:\xampp\htdocs\PWD\minggu12\images\OSN Discuss.png" alt="OSN Discussion" width="180" height="120" align="right" hspace="15" vspace="5" border="1">
-                                
-                                <p>
-                                    Routine coaching and discussion activities on advanced Chemistry materials with the supervising teacher and 
-                                    fellow selection participants as preparation for the National Science Olympiad (OSN).
-                                </p>
-                                <br clear="all">
-                            </article>
-
-                            <br><hr size="1" color="#cccccc"><br>
-
-                            <!-- EXPERIENCE 3 -->
-                            <article>
-                                <h3>3. 1st Place Abang None, Project P5</h3>
-                                <p><i> Date: 2023</i></p>
-                                
-                                <img src="C:\xampp\htdocs\PWD\minggu12\images\Abang None P5.png" alt="Juara 1 Abang None SMA 98" width="180" height="120" align="right" hspace="15" vspace="5" border="1">
-                                
-                                <p>
-                                    Won 1st Place in a school-level leadership and presentation competition based on culture.
-                                    Together with the team, we raised the topic "Kampung Tugu." The presentation was delivered 
-                                    before the panel of judges, participants, and students of SMAN 98 Jakarta, emphasizing 
-                                    cultural values, creativity, and social impact. This experience developed public speaking, 
-                                    communication, and team collaboration skills.
-                                </p>
-                                <br clear="all">
-                            </article>
-
-                            <br><hr size="1" color="#cccccc">
-
-                            <!-- EXPERIENCE 4 -->
-                            <article>
-                                <h3>4. STEM Ki Hajar Selection Participant</h3>
-                                <p><i> Date: 2024</i></p>
-            
-                                <p>
-                                    Participated in the initial selection stage based on Chemistry, Physics, and Biology problems.
-                                    Collaborated in a cross-grade team to solve analysis and logic-based problems.
-                                </p>
-                                <br clear="all">
-                            </article>
-
-                            <br><hr size="1" color="#cccccc">
-
-                            <!-- EXPERIENCE 5 -->
-                            <article>
-                                <h3>5. Public Relations, Faculty of Computer Science, UDINUS</h3>
-                                <p><i> Role: Host & MC | Date: 2026-Present</i></p>
-                                
-                                <img src="C:\xampp\htdocs\PWD\minggu12\images\HUMAS FIK UDINUS PODCAST.png" alt="HUMAS FIK Alumni Pods" width="180" height="120" align="right" hspace="15" vspace="5" border="1">
-                                
-                                <p>
-                                    Completed an internship as part of the Public Relations team of the Faculty of Computer Science at UDINUS.
-                                    Served as a host and Master of Ceremonies (MC) for various faculty events and activities.
-                                    Created content such as photos, videos, and promotional materials to be published on the faculty's social media platforms.
-                                    Collaborated with the PR team in planning and managing digital content to support faculty communication and branding.
-                                </p>
-                                <br clear="all">
-                            </article>
-
-                        </section>
-
-                        <br>
-
-                        <!-- SECTION: CONTACT FORM -->
-                        <section id="contact">
-                            <h2><font color="#003366">E. Visitor Contact Form</font></h2>
-                            <hr size="2" color="#003366" align="left" width="100%">
-                            
-                            <p>Please complete the form below to send a message:</p>
-
-                            <form action="simpan.php" method="post">
-                                <table border="0" cellpadding="6" bgcolor="#e6f2ff" width="100%">
-                                    <tr>
-                                        <td width="25%"><label for="fnama">Full Name</label></td>
-                                        <td width="5%">:</td>
-                                        <td><input type="text" id="fnama" name="fnama" size="35" required placeholder="Enter your full name"></td>
-                                    </tr>
-                                    <tr>
-                                        <td><label for="femail">Email Address</label></td>
-                                        <td>:</td>
-                                        <td><input type="email" id="femail" name="femail" size="35" required placeholder="name@example.com"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Gender</td>
-                                        <td>:</td>
-                                        <td>
-                                            <input type="radio" id="male" name="fgender" value="Male">
-                                            <label for="male">Male</label> &nbsp;
-                                            <input type="radio" id="female" name="fgender" value="Female">
-                                            <label for="female">Female</label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><label for="fmajor">Study Program</label></td>
-                                        <td>:</td>
-                                        <td>
-                                            <select id="fmajor" name="fmajor">
-                                                <option value="SI">Information Systems (S1)</option>
-                                                <option value="TI">Informatics Engineering (S1)</option>
-                                                <option value="DKV">Visual Communication Design (S1)</option>
-                                                <option value="FTV">Film and Television (S1)</option>
-                                                <option value="Animasi">Animation (S1)</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Interests</td>
-                                        <td>:</td>
-                                        <td>
-                                            <input type="checkbox" id="WebDev" name="finterests[]" value="Web Developer">
-                                            <label for="Web Developer">Web Developer</label> &nbsp;
-                                            <input type="checkbox" id="Bussines Analyst" name="finterests[]" value="Bussiness Analyst">
-                                            <label for="Bussiness Analyst">Bussiness Analyst</label> &nbsp;
-                                            <input type="checkbox" id="UI/UX" name="finterests[]" value="UI/UX Designer">
-                                            <label for="UI/UX Designer">UI/UX Designer</label> &nbsp;
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td valign="top"><label for="fmessage">Message</label></td>
-                                        <td valign="top">:</td>
-                                        <td>
-                                            <textarea id="fmessage" name="fmessage" rows="4" cols="35" placeholder="Write your message here..."></textarea>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-                                            <input type="submit" value="Submit Message">
-                                            <input type="reset" value="Reset">
-                                        </td>
-                                    </tr>
-                                </table>
-                            </form>
-                        </section>
-
-                    </main>
-                </td>
-
-                <!-- SIDEBAR / ASIDE (RIGHT) -->
-                <td width="30%">
-                    <div class="aside-container">
-                        <aside>
-                            
-                            <!-- BOX 1: CERTIFICATES -->
-                            <table border="1" cellpadding="12" cellspacing="0" bgcolor="#ffffff" bordercolor="#003366" width="100%">
-                                <tr bgcolor="#004080">
-                                    <th><font color="#ffffff">Certificates</font></th>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <!-- CERTIFICATE 1 -->
-                                        <h4>1. Microsoft Excel Comperensive Guide</h4>
-                                        <p>
-                                            <b>Issuer:</b> Udemy<br>
-                                            <b>Year:</b> 2025
-                                        </p>
-                                        <p align="center">
-                                            <img src="C:\xampp\htdocs\PWD\minggu12\images\Udemy certificate msExcel.png" alt="Basic Web Certificate" width="200" border="1">
-                                        </p>
-
-                                        <hr color="#003366">
-
-                                        <!-- CERTIFICATE 2 -->
-                                        <h4>2. Task Manajer with Lavarel</h4>
-                                        <p>
-                                            <b>Issuer:</b> ID-Networkers<br>
-                                            <b>Year:</b> 2026
-                                        </p>
-                                        <p align="center">
-                                            <img src="C:\xampp\htdocs\PWD\minggu12\images\DiCoding Webinar.png" alt="Webinar Task Manajer Team with Lavarel" width="200" border="1">
-                                        </p>
-
-                                        <hr color="#003366">
-
-                                        <!-- CERTIFICATE 3 -->
-                                        <h4>3. Seminar Sistem Informasi</h4>
-                                        <p>
-                                            <b>Issuer:</b> Dian Nuswantoro University<br>
-                                            <b>Year:</b> 2026
-                                        </p>
-                                        <p align="center">
-                                            <img src="C:\xampp\htdocs\PWD\minggu12\images\Sensasi26 Certificate.png" alt="English Certificate" width="200" border="1">
-                                        </p>
-                                    </td>
-                                </tr>
-                            </table>
-
-                            <br>
-
-                            <!-- BOX 2: CAMPUS NOTES -->
-                            <table border="1" cellpadding="12" cellspacing="0" bgcolor="#ffffff" bordercolor="#003366" width="100%">
-                                <tr bgcolor="#004080">
-                                    <th><font color="#ffffff">Campus Notes</font></th>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p>
-                                            Class schedules and academic curriculum details can be accessed directly via the student portal:
-                                        </p>
-                                        <p align="center">
-                                            <a href="https://mhs.dinus.ac.id" target="_blank"><b>SiAdin UDINUS Portal</b></a>
-                                        </p>
-                                        <hr color="#003366">
-                                        <h4>Assignment Notice:</h4>
-                                        <p>
-                                            All source code revisions must be committed to your Git repository and deployed using GitHub Pages[cite: 2].
-                                        </p>
-                                    </td>
-                                </tr>
-                            </table>
-
-                        </aside>
+                <div class="col-12 col-md-8">
+                    <h1 class="hero-nama mb-3">Kanaka</h1>
+                    <p class="fs-4 mb-3">Information Systems Student, Dian Nuswantoro University.</p>
+                    <p class="hero-deskripsi mb-4">
+                        Welcome to my website. This website is created to introduce 
+                        my profile, education, experience, and activities that I engage in.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="#sertifikat" class="btn btn-light rounded-1 px-4">View Certificates</a>
+                        <a href="cv/CV-Kanaka.pdf" download="CV-Kanaka.pdf" class="btn btn-outline-light rounded-1 px-4">
+                            <i class="bi bi-download me-2"></i>Download CV
+                        </a>
                     </div>
-                </td>
-            </tr>
-        </table>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= MAIN CONTENT + ASIDE ================= -->
+    <div class="container py-5">
+        <div class="row g-4 g-lg-5">
+
+            <!-- ---------- MAIN ---------- -->
+            <main class="col-12 col-lg-8">
+
+                <section id="tentang" class="bagian">
+                    <h2>About Me</h2>
+                    <p class="lead">
+                        Hello! My name is <b>Kanaka Tabina</b>. I am a student at Dian Nuswantoro University, majoring in Information Systems.
+                        I have a strong interest in computer science, communication, and publication. My hobbies include fishing, swimming, 
+                        and collecting diecast cars. I enjoy learning new technologies and continuously improving my technical and 
+                        problem-solving skills through academic projects and self-study.
+                    </p>
+
+                    <p>
+                        This website is built entirely using HTML5 semantic elements without external CSS to fulfill the basic web structure assignment requirements. 
+                        Throughout this page, I utilize various HTML5 tags to structure and present information systematically. 
+                        Building this project serves as a practical exercise to better understand foundational web development concepts.
+                    </p>
+                </section>
+
+                <section id="pendidikan" class="bagian">
+                    <h2>Education</h2>
+
+                    <!-- Riwayat pendidikan memakai grid Bootstrap (row + col), bukan <table> -->
+                    <div class="tabel-grid" role="table" aria-label="Riwayat pendidikan">
+
+                        <!-- judul kolom: hanya tampil di layar md ke atas -->
+                        <div class="row g-0 tabel-judul d-none d-md-flex" role="row">
+                            <div class="col-md-2 sel" role="columnheader">Year</div>
+                            <div class="col-md-4 sel" role="columnheader">School / Institution</div>
+                            <div class="col-md-2 sel" role="columnheader">Status</div>
+                            <div class="col-md-4 sel" role="columnheader">Major / Notes</div>
+                        </div>
+
+                        <div class="row g-0 tabel-baris" role="row">
+                            <div class="col-6 col-md-2 order-1 order-md-0 sel fw-bold" role="cell"><span class="label-hp d-md-none">Year</span>2025 - Now</div>
+                            <div class="col-12 col-md-4 order-3 order-md-0 sel" role="cell"><span class="label-hp d-md-none">School / Institution</span>Dian Nuswantoro University Semarang</div>
+                            <div class="col-6 col-md-2 order-2 order-md-0 sel" role="cell"><span class="label-hp d-md-none">Status</span>On Going</div>
+                            <div class="col-12 col-md-4 order-4 order-md-0 sel" role="cell"><span class="label-hp d-md-none">Major / Notes</span>Information System</div>
+                        </div>
+
+                        <div class="row g-0 tabel-baris" role="row">
+                            <div class="col-6 col-md-2 order-1 order-md-0 sel fw-bold" role="cell"><span class="label-hp d-md-none">Year</span>2022 - 2025</div>
+                            <div class="col-12 col-md-4 order-3 order-md-0 sel" role="cell"><span class="label-hp d-md-none">School / Institution</span>SMA Negeri 98 Jakarta</div>
+                            <div class="col-6 col-md-2 order-2 order-md-0 sel" role="cell"><span class="label-hp d-md-none">Status</span>Graduated</div>
+                            <div class="col-12 col-md-4 order-4 order-md-0 sel" role="cell"><span class="label-hp d-md-none">Major / Notes</span>Paket A (Mathematics, Physics, Informatics, English)</div>
+                        </div>
+
+                        <div class="row g-0 tabel-baris" role="row">
+                            <div class="col-6 col-md-2 order-1 order-md-0 sel fw-bold" role="cell"><span class="label-hp d-md-none">Year</span>2019 - 2022</div>
+                            <div class="col-12 col-md-4 order-3 order-md-0 sel" role="cell"><span class="label-hp d-md-none">School / Institution</span>9 Junior High School Jakarta</div>
+                            <div class="col-6 col-md-2 order-2 order-md-0 sel" role="cell"><span class="label-hp d-md-none">Status</span>Graduated</div>
+                            <div class="col-12 col-md-4 order-4 order-md-0 sel" role="cell"><span class="label-hp d-md-none">Major / Notes</span> - </div>
+                        </div>
+                        
+                        <div class="row g-0 tabel-baris" role="row">
+                            <div class="col-6 col-md-2 order-1 order-md-0 sel fw-bold" role="cell"><span class="label-hp d-md-none">Year</span>2013 - 2019 </div>
+                            <div class="col-12 col-md-4 order-3 order-md-0 sel" role="cell"><span class="label-hp d-md-none">School / Institution</span>14 Elementary School Jakarta</div>
+                            <div class="col-6 col-md-2 order-2 order-md-0 sel" role="cell"><span class="label-hp d-md-none">Status</span>Graduated</div>
+                            <div class="col-12 col-md-4 order-4 order-md-0 sel" role="cell"><span class="label-hp d-md-none">Major / Notes</span> - </div>
+                        </div>
+
+                    </div>
+                </section>        
+
+                <section id="hobi" class="bagian">
+                    <h2>Skills &amp; Hobbies</h2>
+
+                    <!-- Baris 1: dua kotak sama lebar -->
+                    <div class="row g-3">
+                        <div class="col-12 col-md-6">
+                            <div class="kotak-skill h-100">
+                                <h3 class="h6 fw-bold mb-3">Soft Skills</h3>
+                                <ul class="daftar-chip">
+                                    <li class="chip">Public Speaking</li>
+                                    <li class="chip">Communication</li>
+                                    <li class="chip">Teamwork</li>
+                                    <li class="chip">Leadership</li>
+                                    <li class="chip">Time Management</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="kotak-skill h-100">
+                                <h3 class="h6 fw-bold mb-3">Technical Skills</h3>
+                                <ul class="daftar-chip">
+                                    <li class="chip chip-biru">Microsoft Word</li>
+                                    <li class="chip chip-biru">Microsoft Excel</li>
+                                    <li class="chip chip-biru">Microsoft Power Point</li>
+                                    <li class="chip chip-biru">Canva</li>
+                                    <li class="chip chip-biru">Basic Video Editing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Baris 2: hobi, 4 kotak selebar kolom (2 x 2 di HP) -->
+                    <h3 class="h6 fw-bold mt-4 mb-3">Hobbies &amp; Interests</h3>
+                    <div class="row row-cols-2 row-cols-sm-4 g-3">
+                        <div class="col"><div class="hobi-tile">Fishing</div></div>
+                        <div class="col"><div class="hobi-tile">Swimming</div></div>
+                        <div class="col"><div class="hobi-tile">Cycling</div></div>
+                        <div class="col"><div class="hobi-tile">Diecast Collection</div></div>
+                    </div>
+                </section>
+
+                <section id="experience" class="bagian">
+                    <h2>Experience</h2>
+
+                    <!-- EXPERIENCE 1 -->
+                    <article class="pengalaman row g-3">
+                        <div class="col-12 col-md-8">
+                            <h3 class="h5 fw-semibold">1. Communication Media Extracurricular</h3>
+                            <p class="text-secondary mb-2">Date: 2022-2023</p>
+                            <p>Participated in school journalism activities through event coverage, interviews, documentation, and the preparation of publication media. This experience shaped communication, collaboration, and the ability to convey information creatively and informatively.</p>
+                            <p>Media Content Production : Involved in the documentation, coverage, and content production process together with the Communication Media team.</p>
+                        </div>
+                        <div class="col-8 col-sm-6 col-md-4">
+                            <img src="images/HIFIVE_98.png" class="pengalaman-foto img-fluid border rounded-1" alt="Majalah HIFIVE SMA N 98">
+                        </div>
+                    </article>
+
+                    <!-- EXPERIENCE 2 -->
+                    <article class="pengalaman row g-3">
+                        <div class="col-12 col-md-8">
+                            <h3 class="h5 fw-semibold">2. Chemistry Olympiad Selection Participant</h3>
+                            <p class="text-secondary mb-2">Date: 2023</p>
+                            <p>Routine coaching and discussion activities on advanced Chemistry materials with the supervising teacher and fellow selection participants as preparation for the National Science Olympiad (OSN).</p>
+                        </div>
+                        <div class="col-8 col-sm-6 col-md-4">
+                            <img src="images/OSN Discuss.png" class="pengalaman-foto img-fluid border rounded-1" alt="OSN Discussion">
+                        </div>
+                    </article>
+
+                    <!-- EXPERIENCE 3 -->
+                    <article class="pengalaman row g-3">
+                        <div class="col-12 col-md-8">
+                            <h3 class="h5 fw-semibold">3. 1st Place Abang None, Project P5</h3>
+                            <p class="text-secondary mb-2">Date: 2023</p>
+                            <p>Won 1st Place in a school-level leadership and presentation competition based on culture. Together with the team, we raised the topic "Kampung Tugu." The presentation was delivered before the panel of judges, participants, and students of SMAN 98 Jakarta, emphasizing cultural values, creativity, and social impact. This experience developed public speaking, communication, and team collaboration skills.</p>
+                        </div>
+                        <div class="col-8 col-sm-6 col-md-4">
+                            <img src="images/Abang None P5.png" class="pengalaman-foto img-fluid border rounded-1" alt="Juara 1 Abang None SMA 98">
+                        </div>
+                    </article>
+
+                    <!-- EXPERIENCE 4 -->
+                    <article class="pengalaman row g-3">
+                        <div class="col-12">
+                            <h3 class="h5 fw-semibold">4. STEM Ki Hajar Selection Participant</h3>
+                            <p class="text-secondary mb-2">Date: 2024</p>
+                            <p>Participated in the initial selection stage based on Chemistry, Physics, and Biology problems. Collaborated in a cross-grade team to solve analysis and logic-based problems.</p>
+                        </div>
+                    </article>
+
+                    <!-- EXPERIENCE 5 -->
+                    <article class="pengalaman row g-3">
+                        <div class="col-12 col-md-8">
+                            <h3 class="h5 fw-semibold">5. Public Relations, Faculty of Computer Science, UDINUS</h3>
+                            <p class="text-secondary mb-2">Role: Host &amp; MC | Date: 2026-Present</p>
+                            <p>Completed an internship as part of the Public Relations team of the Faculty of Computer Science at UDINUS. Served as a host and Master of Ceremonies (MC) for various faculty events and activities. Created content such as photos, videos, and promotional materials to be published on the faculty's social media platforms. Collaborated with the PR team in planning and managing digital content to support faculty communication and branding.</p>
+                        </div>
+                        <div class="col-8 col-sm-6 col-md-4">
+                            <img src="images/HUMAS FIK UDINUS PODCAST.png" class="pengalaman-foto img-fluid border rounded-1" alt="HUMAS FIK Alumni Pods">
+                        </div>
+                    </article>
+                </section>
+
+                <section id="saran" class="bagian">
+                    <h2>Feedback</h2>
+
+                    <form class="form-kartu rounded-4 border bg-white p-4">
+                        <p class="text-secondary mb-4">
+                            Any feedback for this website? Write it here, I'll read it (and maybe respond).
+                        </p>
+
+                        <div class="row g-3">
+
+                            <!-- Nama -->
+                            <div class="col-12 col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="nama" placeholder="Nama" required>
+                                    <label for="nama">Name or nickname <span class="text-danger">*</span></label>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="col-12 col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                    <label for="email">Email, so I can respond <span class="text-danger">*</span></label>
+                                </div>
+                            </div>
+
+                            <!-- Pilihan 1 -->
+                            <div class="col-12 col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select" id="peran" required>
+                                        <option value="" selected disabled>Select one</option>
+                                        <option>Dosen yang baik hati dan friendly</option>
+                                        <option>Classmate</option>
+                                        <option>Recruiter</option>
+                                        <option>Tersesat, tapi betah</option>
+                                    </select>
+                                    <label for="peran">Your Role <span class="text-danger">*</span></label>
+                                </div>
+                            </div>
+
+                            <!-- Pilihan 2 -->
+                            <div class="col-12 col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select" id="favorit">
+                                        <option value="" selected disabled>Choose one</option>
+                                        <option>About Me</option>
+                                        <option>Education</option>
+                                        <option>Skills &amp; Hobbies</option>
+                                        <option>Experience</option>
+                                        <option>Certificates</option>
+                                    </select>
+                                    <label for="favorit">Part you like the most</label>
+                                </div>
+                            </div>
+
+                            <!-- Saran -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="pesan" placeholder="Feedback" style="height: 140px" required></textarea>
+                                    <label for="pesan">Feedback, can be spicy as long as it's polite <span class="text-danger">*</span></label>
+                                </div>
+                            </div>
+
+                            <!-- Skor (range) -->
+                            <div class="col-12">
+                                <label for="skor" class="form-label mb-1">How cool is this website?</label>
+                                <input type="range" class="form-range" id="skor" min="1" max="5" step="1" value="4">
+                                <div class="d-flex justify-content-between small text-secondary">
+                                    <span>Nothing much</span>
+                                    <span>SO COOL!</span>
+                                </div>
+                            </div>
+
+                            <!-- Switch -->
+                            <div class="col-12">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="kabari">
+                                    <label class="form-check-label" for="kabari">Notify me about updates (no spam, I promise)</label>
+                                </div>
+                            </div>
+
+                            <!-- Tombol -->
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg w-100 rounded-3">Send Feedback</button>
+                            </div>
+                        </div>
+
+                        <p class="small text-secondary text-center mx-auto mt-3 mb-0">
+                            Your data is only used to respond to this feedback.
+                        </p>
+                    </form>
+                </section>
+
+                <section id="penutup" class="bagian">
+                    <h2>The End</h2>
+                    <p class="mb-0">
+                        That's a short introduction about me. 
+                        I hope this website can provide useful information to visitors. 
+                        Thank you for visiting my website and scroll until the end.
+                    </p>
+
+                    <p>
+                        "Fake it till you make it, and act like everything is under control." 
+                        #justkidding, but seriously, keep learning and improving yourself.
+                        Have a nice day~!
+                    </p>
+                </section>
+            </main>
+
+            <!-- ---------- ASIDE: Certificates ---------- -->
+            <aside class="col-12 col-lg-4">
+                <div class="aside-sticky sticky-lg-top">
+                    <section id="sertifikat" class="panel-sertifikat p-4 rounded-2">
+                        <h2 class="h4 mb-1">Certificates</h2>
+                        <p class="text-secondary small mb-4">Click on the image to enlarge it, click again to close.</p>
+
+                        <div class="row row-cols-1 row-cols-sm-3 row-cols-lg-1 g-4">
+
+                            <!-- Sertifikat 1 -->
+                            <div class="col" id="sertif-1">
+                                <h3 class="h6 fw-semibold mb-1">Microsoft Excel Comprehensive Guide</h3>
+                                <p class="small text-secondary mb-2">Udemy, 2025</p>
+                                <div class="certif-box">
+                                    <input type="checkbox" id="certif1" class="certif-toggle">
+                                    <label for="certif1">
+                                        <img src="images/Udemy certificate msExcel.png"
+                                            class="border rounded-1 bg-white"
+                                            alt="Sertifikat Microsoft Excel Comprehensive Guide">
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Sertifikat 2 -->
+                            <div class="col" id="sertif-2">
+                                <h3 class="h6 fw-semibold mb-1">Task Manager with Laravel</h3>
+                                <p class="small text-secondary mb-2">ID-Networkers, 2026</p>
+                                <div class="certif-box">
+                                    <input type="checkbox" id="certif2" class="certif-toggle">
+                                    <label for="certif2">
+                                        <img src="images/DiCoding Webinar.png"
+                                            class="border rounded-1 bg-white"
+                                            alt="Sertifikat Webinar Task Manager Team with Laravel">
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Certificate 3 -->
+                            <div class="col" id="sertif-3">
+                                <h3 class="h6 fw-semibold mb-1">Seminar Sistem Informasi</h3>
+                                <p class="small text-secondary mb-2">Universitas Dian Nuswantoro, 2026</p>
+                                <div class="certif-box">
+                                    <input type="checkbox" id="certif3" class="certif-toggle">
+                                    <label for="certif3">
+                                        <img src="images/Sensasi26 Certificate.png"
+                                            class="border rounded-1 bg-white"
+                                            alt="Sertifikat Seminar Sistem Informasi">
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+            </aside>
+
+        </div>
     </div>
 
-    <br>
-
-    <!-- FOOTER -->
-    <footer>
-        <table border="0" width="100%" bgcolor="#003366" cellpadding="15">
-            <tr>
-                <td align="center">
-                    <font color="#ffffff">
-                        &copy; 2026 <b>Kanaka Tabina</b> - Basic Web Programming |
-                        <a href="https://dinus.ac.id/id/" target="_blank"">
-                        <img src="C:\xampp\htdocs\PWD\minggu12\images\Logo UDINUS.png" alt="Logo Universitas Dian Nuswantoro" width="20">
-                        </a>
-                        Dian Nuswantoro University
-                    </font>
-                </td>
-            </tr>
-        </table>
+    <!-- ================= FOOTER ================= -->
+    <footer class="border-top py-4 text-secondary small">
+        <div class="container d-flex flex-column flex-sm-row justify-content-between gap-2">
+            <span>&copy; 2026 Kanaka, Universitas Dian Nuswantoro</span>
+            <a href="#atas" class="link-primary">Back to top</a>
+        </div>
     </footer>
 
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
